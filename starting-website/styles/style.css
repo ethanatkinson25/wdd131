@@ -1,0 +1,24 @@
+/* Color pallete: 393E41  D3D0CB  E2C044  587B7F  1E2019  */
+:root {
+    --background-color: #1E2019;
+    --primary-color: #587B7F;
+    --font-color: #D3D0CB;
+    --secondary-color: #393E41;
+    --vibrant-color: #E2C044;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--font-color);
+    font-family: "Sansation", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+main {
+
+}
+
+section {
+
+}
