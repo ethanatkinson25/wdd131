@@ -15,10 +15,40 @@ body {
     font-style: normal;
 }
 
-main {
-
+header {
+    align-items: center;
+    background-color: var(--primary-color);
 }
 
-section {
+span {
+    display: block;
+    background-color: var(--secondary-color);
+    text-align: center;
+    font-size: larger;
+    margin-top: 0;
+    padding: 4rem;
+}
 
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+}
+
+a {
+    color: var(--font-color);
+}
+
+main {
+    border: 1px solid var(--font-color);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+aside {
+    max-width: 30rem;
 }
