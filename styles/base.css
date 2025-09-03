@@ -102,6 +102,25 @@ aside {
     margin: 1rem;
 }
 
+.aside-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 2rem;
+}
+
+.aside-links a {
+    color: var(--font-color);
+    transition: color 1s;
+    text-decoration: none;
+}
+
+.aside-links a:hover{
+    text-decoration: underline;
+    color: var(--vibrant-color);
+}
+
 footer {
     margin-top: 2rem;
 }
