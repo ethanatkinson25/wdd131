@@ -44,8 +44,15 @@ nav {
     padding: 2rem;
 }
 
-a {
+nav a {
     color: var(--font-color);
+    transition: color 1s;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: var(--vibrant-color);
 }
 
 main {
@@ -57,7 +64,7 @@ h2 {
     display: block;
     text-align: center;
     background-color: var(--secondary-color);
-    border-radius: 2rem;
+    border-radius: 2rem 2rem 0 0;
     padding: 1rem;
     margin-bottom: 1rem;
 }
@@ -75,12 +82,24 @@ p {
 
 .card {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 60rem;
+    margin: 1rem;
+}
+
+.texture {
+    margin-right: 1rem;
 }
 
 aside {
     max-width: 30rem;
     border: 1px solid var(--font-color);
     border-radius: 2rem;
+}
+
+.aside-text {
+    margin: 1rem;
 }
 
 footer {
