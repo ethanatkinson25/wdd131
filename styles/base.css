@@ -123,4 +123,16 @@ aside {
 
 footer {
     margin-top: 2rem;
+    display: block;
+    background-color: var(--secondary-color);
+    text-align: center;
+    align-items: center;
+    font-size: larger;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
 }

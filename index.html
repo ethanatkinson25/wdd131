@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/base.css">
-    <script src="scripts/getdates.js" defer></script>
     <meta name="description" content="A wesite for WDD 131 – Dynamic Web Fundamentals. Written by Ethan Atkinson and serves as a platform for learning HTML, CSS, and JavaScript.">
     <meta name="author" content="Ethan Atkinson">
     <title>WDD 131 – Dynamic Web Fundamentals – Ethan Atkinson</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
     <header>
@@ -47,8 +47,10 @@
         </aside>
     </div>
     <footer>
-        <span id="currentyear"> Ethan Atkinson | Utah </span>
-        <p class="lastModified"></p>
+        <div class="footer-info">
+            <p><span id="currentyear"> &copy; | Ethan Atkinson | Utah | </span></p>
+            <p id="lastModified"></p>
+        </div>
     </footer>
 </body>
 </html>
