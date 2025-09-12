@@ -1,0 +1,34 @@
+@media screen and (min-width: 500px){
+
+    header, main, footer {
+        max-width: 1500px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    nav a {
+        color: var(--font-color);
+        transition: color 1s;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+        color: var(--vibrant-color);
+    }
+
+    .album {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+    }
+
+    #menu {
+        display: none;
+    }
+}
