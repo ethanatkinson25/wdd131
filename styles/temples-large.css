@@ -22,6 +22,18 @@
         color: var(--vibrant-color);
     }
 
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 2rem;
+        list-style: none;
+    }
+
+    .navigation li {
+        margin: 0 4rem;
+    }
+
     .album {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;

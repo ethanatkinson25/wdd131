@@ -37,17 +37,23 @@ nav a:hover {
 }
 
 .navigation {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    justify-items: center;
-    padding: 2rem;
-    list-style: none;
+    display: none;
 }
+
+.navigation.open {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2rem;
+  gap: 1rem;
+  text-align: center;
+}
+
 
 h1 {
     text-align: center;
     margin-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 h2 {
@@ -84,12 +90,17 @@ body {
 
 #menu::before {
     content: "☰";
-    background-color: var(--primary-color);
+    background: var(--primary-color);
+    border: 0;
 }
 
 #menu.open::before {
     content: "X";
     background-color: var(--primary-color);
+}
+
+.open a {
+    display: block;
 }
 
 footer {
