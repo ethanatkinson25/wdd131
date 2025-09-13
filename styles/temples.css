@@ -38,6 +38,7 @@ nav a:hover {
 
 .navigation {
     display: none;
+    list-style: none;
 }
 
 .navigation.open {
@@ -47,7 +48,9 @@ nav a:hover {
   padding: 2rem;
   gap: 1rem;
   text-align: center;
+  list-style: none;
 }
+
 
 
 h1 {
