@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/place.css">
+        <title>WDD 131 – Dynamic Web Fundamentals – Place Website</title>
+        <meta name="description" content="A website focused on the country of Sweeden. Used to practice media queries, web design principles, SVG icons, javascript principles.">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+        <script src="scripts/place.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Place</h1>
+        </header>
+        <main>
+            <section>
+                <picture>
+                    <source srcset="images\place-images\hero-desktop-large.webp" media="(min-width: 1500px)">
+                    <source srcset="images\place-images\hero-desktop-medium.webp" media="(min-width: 1000px)">
+                    <source srcset="images\place-images\hero-destop-small.webp" media="(min-width: 500px)">
+                    <img src="images/place-images/hero-mobile.webp" alt="Image of a Sweedish contryside" width="358" height="537">
+                </picture>
+            </section>
+            <section class="main-content">
+                <section class="info-section">
+                    <h2>Data</h2>
+                    <img src="images/place-images/data-icon.svg" alt="Data Icon" width="75">
+                    <p></p>
+                </section>
+                <section class="info-section">
+                    <h2>Weather</h2>
+                    <img src="images/place-images/weather-icon.svg" alt="Weather Icon" width="100">
+                    <p></p>
+                </section>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-info">
+                <p><span id="currentyear"> &copy; | Ethan Atkinson | Utah | </span></p>
+                <p id="lastModified"></p>
+            </div>
+        </footer>
+    </body>
+</html>
