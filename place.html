@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="styles/place.css">
         <title>WDD 131 – Dynamic Web Fundamentals – Place Website</title>
         <meta name="description" content="A website focused on the country of Sweeden. Used to practice media queries, web design principles, SVG icons, javascript principles.">
+        <meta name="author" content="Ethan Atkinson">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
@@ -16,26 +17,79 @@
             <h1>Place</h1>
         </header>
         <main>
-            <section>
-                <picture>
-                    <source srcset="images\place-images\hero-desktop-large.webp" media="(min-width: 1500px)">
-                    <source srcset="images\place-images\hero-desktop-medium.webp" media="(min-width: 1000px)">
-                    <source srcset="images\place-images\hero-destop-small.webp" media="(min-width: 500px)">
-                    <img src="images/place-images/hero-mobile.webp" alt="Image of a Sweedish contryside" width="358" height="537">
-                </picture>
-            </section>
-            <section class="main-content">
-                <section class="info-section">
-                    <h2>Data</h2>
-                    <img src="images/place-images/data-icon.svg" alt="Data Icon" width="75">
-                    <p></p>
+            <!-- <div class="hero-display"> -->
+                <section>
+                    <picture>
+                        <source srcset="images/place-images/hero-desktop-large.webp" media="(min-width: 1500px)">
+                        <source srcset="images/place-images/hero-desktop-medium.webp" media="(min-width: 1000px)">
+                        <source srcset="images/place-images/hero-destop-small.webp" media="(min-width: 500px)">
+                        <img src="images/place-images/hero-mobile.webp" alt="Image of a Sweedish contryside" width="358" height="537">
+                    </picture>
                 </section>
-                <section class="info-section">
-                    <h2>Weather</h2>
-                    <img src="images/place-images/weather-icon.svg" alt="Weather Icon" width="100">
-                    <p></p>
+                <section class="main-content">
+                    <section class="info-section">
+                        <h2>Data</h2>
+                        <img src="images/place-images/data-icon.svg" alt="Data Icon" width="75">
+                        <table>
+                            <tr>
+                                <td>Area</td>
+                                <td>450,295 km²</td>
+                            </tr>
+                            <tr>
+                                <td>Population</td>
+                                <td>10,588,230</td>
+                            </tr>
+                            <tr>
+                                <td>Capital</td>
+                                <td>Stockholm</td>
+                            <tr>
+                                <td>Languages</td>
+                                <td>Swedish; Sámi; Finnish; Meänkieli; Romani; Yiddish</td>
+                            </tr>
+                            <tr>
+                                <td>Currency</td>
+                                <td>Swedish krona</td>
+                            </tr>
+                            <tr>
+                                <td>Time Zone</td>
+                                <td>UTC +1 (CET)</td>
+                            </tr>
+                            <tr>
+                                <td>Calling Code</td>
+                                <td>+46</td>
+                            </tr>
+                            <tr>
+                                <td>Internet TLD</td>
+                                <td>.se</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section class="info-section-weather">
+                        <div class="weather-header">
+                            <h2>Weather</h2>
+                            <img src="images/place-images/weather-icon.svg" alt="Weather Icon" width="100">
+                        </div>
+                        <table>
+                            <tr>
+                                <td>Temprature</td>
+                                <td><span id="temp">45</span> °F</td>
+                            </tr>
+                            <tr>
+                                <td>Conditions</td>
+                                <td>Partly Cloudy</td>
+                            </tr>
+                            <tr>
+                                <td>Wind</td>
+                                <td><span id="speed">5</span> mph</td>
+                            </tr>
+                            <tr>
+                                <td>Wind Chill</td>
+                                <td><span id="wind-chill">–</span></td>
+                            </tr>
+                        </table>
+                    </section>
                 </section>
-            </section>
+            <!-- </div> -->
         </main>
         <footer>
             <div class="footer-info">
