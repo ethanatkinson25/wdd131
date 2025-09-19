@@ -32,11 +32,6 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('wind-chill').textContent = display;
 });
 
-/** 
- * One-line wind-chill calculator
- * For °F: National Weather Service formula 
- * For °C: Environment Canada formula 
- */
 function calculateWindChill(T, V, units) {
   return units === 'F'
     ? 35.74 + 0.6215 * T - 35.75 * V ** 0.16 + 0.4275 * T * V ** 0.16
