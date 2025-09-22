@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/lazy-loading.css">
+    <title>WDD131 | Dynamic Web Fundamentals | Lazy Loading Page</title>
+    <meta name="description" content="A website that utilizes lazy loading on the catalog of images contained in it. This is to be used to demonstrate lazy loading on a webpage.">
+    <meta name="author" content="Ethan Atkinson">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <script src="scripts/lazyLoading.js" defer></script>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <h1>Lazy Loading page</h1>
+        <div class="img-selection">
+            <img src="images/nature.webp" alt="Distant view of a volcanic eruption" loading="lazy" width="400" height="600">
+            <img src="images/nature2.webp" alt="Distant view of a volcanic eruption" loading="lazy" width="400" height="600">
+            <img src="images/nature3.webp" alt="Distant view of a volcanic eruption" loading="lazy" width="400" height="600">
+            <img src="images/nature4.webp" alt="Distant view of a volcanic eruption" loading="lazy" width="400" height="600">
+            <img src="images/nature2.webp" alt="Distant view of a volcanic eruption" loading="lazy" width="400" height="600">
+            <img src="images/nature3.webp" alt="Distant view of a volcanic eruption" loading="lazy" width="400" height="600">
+        </div>
+    </main>
+    <footer>
+        <div class="footer-info">
+            <p><span id="currentyear"> &copy; | Ethan Atkinson | Utah | </span></p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
