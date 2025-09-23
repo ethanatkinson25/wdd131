@@ -1,0 +1,42 @@
+:root {
+    --background-color: #F6F4D2;
+    --primary-color: #CC2936;
+    --secondary-color: #08415C;
+    --accent1: #657153;
+    --accent2: #FF934F;
+}
+
+body {
+    background-color: var(--background-color);
+    color: black;
+}
+
+
+
+/*Index CSS*/
+
+
+
+
+footer {
+    margin-top: 2rem;
+    display: block;
+    /* background-color: var(--secondary-color); */
+    text-align: center;
+    align-items: center;
+    font-size: larger;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+
+/*History CSS*/
+
+
+
+/*Products CSS*/
