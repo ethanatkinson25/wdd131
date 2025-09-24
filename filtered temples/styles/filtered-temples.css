@@ -1,0 +1,131 @@
+:root {
+    --background-color: #A49E8D;
+    --primary-color: #689689;
+    --font-color: black;
+    --secondary-color: #504136;
+    --vibrant-color: #D64933;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header, footer, main { 
+  max-width: 390px;
+  margin: 0 auto;
+}
+
+header {
+    align-items: center;
+    background-color: var(--primary-color);
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+
+nav a {
+    color: var(--font-color);
+    transition: color 1s;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: var(--vibrant-color);
+}
+
+.navigation {
+    display: none;
+    list-style: none;
+}
+
+.navigation.open {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2rem;
+  gap: 1rem;
+  text-align: center;
+  list-style: none;
+}
+
+
+
+h1 {
+    text-align: center;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--font-color);
+    font-family: "Lexend", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.album {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.album img {
+    max-width: 290px;
+}
+
+#menu {
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: 2rem;
+    border: 0;
+    padding: 0.3rem;
+}
+
+#menu:focus {
+    outline: none;
+}
+
+#menu::before {
+    content: "☰";
+    background: var(--primary-color);
+    border: 0;
+}
+
+#menu.open::before {
+    content: "X";
+    background-color: var(--primary-color);
+}
+
+.open a {
+    display: block;
+}
+
+footer {
+    margin-top: 2rem;
+    display: block;
+    background-color: var(--secondary-color);
+    text-align: center;
+    align-items: center;
+    font-size: larger;
+    color: #fff;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+}
