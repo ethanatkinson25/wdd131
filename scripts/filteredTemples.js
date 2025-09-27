@@ -85,39 +85,75 @@ const temples = [
   {
     templeName: "Boston Massachusetts Temple",
     location: "Boston, Massachusetts",
-    dedicated: "1 October 2000",
+    dedicated: "2000 October 1",
     area: 69600,
     imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/boston-massachusetts-temple/boston-massachusetts-temple-9913-main.jpg"
   },
   {
     templeName: "Feather River California Temple",
     location: "Yuba City, California",
-    dedicated: "8 October 2023",
+    dedicated: "2023 October 8",
     area: 41665, 
     imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/feather-river-california-temple/feather-river-california-temple-39697-main.jpg"
   },
   {
     templeName: "Fairbanks Alaska Temple",
     location: "Fairbanks, Alaska",
-    dedicated: "27 September 2025",
+    dedicated: "2025 September 27",
     area: 10000,
     imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/fairbanks-alaska-temple/fairbanks-alaska-temple-55375-main.jpg"
   }
 ];
 
-for (let i = 0; i < temples.length; i++) {
-    const newTemple = temples[i];
+function displayTemples(list){
+  albumClass.innerHTML = ""; 
+  list.forEach(temple => {
     const templeCard = document.createElement("div");
     templeCard.className = "temple-card";
 
+    
 
     templeCard.innerHTML = `
-      <h2>${newTemple.templeName}</h2>
-      <p>Location: ${newTemple.location}</p>
-      <p>Dedication Date: ${newTemple.dedicated}</p>
-      <p>Area in sq feet: ${newTemple.area.toLocaleString()}</p>
-      <img src="${newTemple.imageUrl}" alt="${newTemple.templeName}" loading="lazy">
+      <h2>${temple.templeName}</h2>
+      <p>Location: ${temple.location}</p>
+      <p>Dedication Date: ${temple.dedicated}</p>
+      <p>Area in sq feet: ${temple.area.toLocaleString()}</p>
+      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" width="290" height="145">
     `;
-    albumClass.appendChild(templeCard);
-};
 
+    albumClass.appendChild(templeCard);
+  });
+}
+
+displayTemples(temples);
+
+const nav = document.querySelector(".navigation");
+nav.addEventListener('click', function (event) {
+  event.preventDefault();
+  if (event.target.tagName.toLowerCase() === "a"){
+    const type = event.target.dataset.filter;
+    if (type){
+      filterTemples(type);
+    }else {
+      displayTemples(temples);
+    }
+  }
+});
+
+
+function filterTemples(type) {
+    let selectedTemple = temples;
+    if (type === "old") {
+      selectedTemple = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) < 2000);
+      // selectedTemple = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) >= 1900);
+    } else if (type === "new") {
+      // selectedTemple = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) <= 2000);
+      selectedTemple = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) >= 2000);
+    } else if (type === "large") {
+      selectedTemple = temples.filter(temple => temple.area > 90000);
+    } else if (type === "small") {
+      selectedTemple = temples.filter(temple => temple.area < 10000);
+    }
+
+    displayTemples(selectedTemple);
+}
