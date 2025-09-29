@@ -145,9 +145,7 @@ function filterTemples(type) {
     let selectedTemple = temples;
     if (type === "old") {
       selectedTemple = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) < 2000);
-      // selectedTemple = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) >= 1900);
     } else if (type === "new") {
-      // selectedTemple = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) <= 2000);
       selectedTemple = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) >= 2000);
     } else if (type === "large") {
       selectedTemple = temples.filter(temple => temple.area > 90000);
