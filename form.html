@@ -7,6 +7,9 @@
         <meta name="author" content="Ethan Atkinson">
         <link rel="stylesheet" href="styles/form.css">
         <title>HTML Form Practice</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap" rel="stylesheet">
         <script src="scripts/form.js" defer></script>
     </head>
     <body>
@@ -17,7 +20,7 @@
             <form method="get" action="review.html">
                 <fieldset>
                     <legend>Product Review</legend>
-                    <label>First Name*</label>
+                    <label>Product*</label>
                     <select id="product" name="product" required>
                         <option value="" disabled selected hidden>
                             Choose a Product...
@@ -26,23 +29,39 @@
                     
                     <label>Rating*</label>
                     <div class="stars">
-                        <label>&star;<input type="radio" id="one-star-rating" name="rating" required></label>
-                        <label>&star; &star;<input type="radio" id="two-star-rating" name="rating" required></label>
-                        <label>&star; &star; &star;<input type="radio" id="three-star-rating" name="rating" required></label>
-                        <label>&star; &star; &star; &star;</label><input type="radio" id="four-star-rating" name="rating" required></label>
-                        <label>&star; &star; &star; &star; &star;<input type="radio" id="five-star-rating" name="rating" required></label>
-                    </div>
-                    
+                        <div class="radio-item">
+                            <label>&star;</label>
+                            <input type="radio" id="one-star-rating" name="rating" required>
+                        </div>
+                        <div class="radio-item">
+                            <label>&star; &star;</label>
+                            <input type="radio" id="two-star-rating" name="rating" required>
+                        </div>
+                        <div class="radio-item">
+                            <label>&star; &star; &star;</label>
+                            <input type="radio" id="three-star-rating" name="rating" required>
+                        </div>
+                        <div class="radio-item">
+                            <label>&star; &star; &star; &star;</label>
+                            <input type="radio" id="four-star-rating" name="rating" required>
+                        </div>
+                        <div class="radio-item">
+                            <label>&star; &star; &star; &star; &star;</label>
+                            <input type="radio" id="five-star-rating" name="rating" required>
+                        </div>
+                     </div>
+
+
                     <label>Date of Installation*</label>
                     <input type="date" id="date" name="input-date" required>
 
                     <label>What features did you find useful? (Optional)</label>
-                    <label>Durability <input type="checkbox" id="feature" name="useful-feature" value="Durability"></label>
-                    <label>Longevity <input type="checkbox" id="feature" name="useful-feature" value="Longevity"></label>
-                    <label>Design <input type="checkbox" id="feature" name="useful-feature" value="Design"></label>
-                    <label>Cost <input type="checkbox" id="feature" name="useful-feature" value="Cost"></label>
-                    <label>Performance <input type="checkbox" id="feature" name="useful-feature" value="Performance"></label>
-                    <label>Versatility <input type="checkbox" id="feature" name="useful-feature" value="Versatility"></label>
+                    <label>Durability <input type="checkbox" id="durability-feature" name="useful-feature" value="Durability"></label>
+                    <label>Longevity <input type="checkbox" id="longevity-feature" name="useful-feature" value="Longevity"></label>
+                    <label>Design <input type="checkbox" id="design-feature" name="useful-feature" value="Design"></label>
+                    <label>Cost <input type="checkbox" id="cost-feature" name="useful-feature" value="Cost"></label>
+                    <label>Performance <input type="checkbox" id="performance-feature" name="useful-feature" value="Performance"></label>
+                    <label>Versatility <input type="checkbox" id="versatility-feature" name="useful-feature" value="Versatility"></label>
 
                     <label>Written Review (Optional)</label>
                     <textarea id="written-review" name="written-review" placeholder="Write your review here..."></textarea>
@@ -50,7 +69,7 @@
                     <label>Username (Optional)</label>
                     <input type="text" id="username" name="username" placeholder="User name">
 
-                    <input type="submit" value="Post Review">
+                    <input id="submitButton" type="submit" value="Post Review">
                 </fieldset>
             </form>
         </main>

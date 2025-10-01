@@ -7,6 +7,9 @@ const now = new Date();
 const thisYear = now.getFullYear();
 const lastModDate = new Date(document.lastModified);
 
+
+let productList = document.getElementById("product");
+
 const products = [
   {
     id: "fc-1888",
@@ -34,6 +37,32 @@ const products = [
     averagerating: 5.0
   }
 ];
+
+const submitButton = document.getElementById("submitButton");
+let submitAmount = 0;
+
+function addToHTML(i){
+    const addedItem = document.createElement("option");
+    addedItem.value = products[i].id;
+    addedItem.innerHTML = `
+        ${products[i].name}
+    `;
+
+    productList.appendChild(addedItem);  
+}
+
+function addProductsList(callback){
+    for(let i = 0; i < products.length; i++){
+        callback(i);
+    }
+}
+
+function countUp() {
+    submitAmount = submitAmount + 1;
+}
+
+addProductsList(addToHTML);
+submitButton.addEventListener('click', countUp);
 
 
 

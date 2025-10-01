@@ -5,20 +5,41 @@
     --accent2: #EEF5DB;
 }
 
+form {
+    max-width: 50%;
+}
+
+body {
+    font-family: "Alan Sans", sans-serif;
+    font-style: normal;
+}
+
+main {
+    background-color: var(--secondary-color);
+}
+
 fieldset {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    color: black;
+    background-color: var(--primary-color);
+}
+
+.radio-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: left;
 }
 
 footer {
     margin-top: 2rem;
     display: block;
-    background-color: var(--secondary-color);
+    background-color: var(--accent1);
     text-align: center;
     align-items: center;
     font-size: larger;
-    color: #fff;
+    color: var(#fff);
 }
 
 .footer-info {
