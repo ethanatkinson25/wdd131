@@ -1,0 +1,29 @@
+:root {
+    --primary-color: #B8D8D8;
+    --secondary-color: #4F6367;
+    --accent1: #FE5F55;
+    --accent2: #EEF5DB;
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+footer {
+    margin-top: 2rem;
+    display: block;
+    background-color: var(--secondary-color);
+    text-align: center;
+    align-items: center;
+    font-size: larger;
+    color: #fff;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+}

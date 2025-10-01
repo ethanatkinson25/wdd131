@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A website dedicated to the Atkinson Barbershop & Shaving Co. small business. It sells shaving products like shaving cream, saftey razors, straight razors, aftershave, and provides barber services.">
+        <meta name="author" content="Ethan Atkinson">
+        <link rel="stylesheet" href="styles/form.css">
+        <title>HTML Form Practice</title>
+        <script src="scripts/form.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>HTML Form Practice</h1>
+        </header>
+        <main>
+            <form method="get" action="review.html">
+                <fieldset>
+                    <legend>Product Review</legend>
+                    <label>First Name*</label>
+                    <select id="product" name="product" required>
+                        <option value="" disabled selected hidden>
+                            Choose a Product...
+                        </option>
+                    </select>
+                    
+                    <label>Rating*</label>
+                    <div class="stars">
+                        <label>&star;<input type="radio" id="one-star-rating" name="rating" required></label>
+                        <label>&star; &star;<input type="radio" id="two-star-rating" name="rating" required></label>
+                        <label>&star; &star; &star;<input type="radio" id="three-star-rating" name="rating" required></label>
+                        <label>&star; &star; &star; &star;</label><input type="radio" id="four-star-rating" name="rating" required></label>
+                        <label>&star; &star; &star; &star; &star;<input type="radio" id="five-star-rating" name="rating" required></label>
+                    </div>
+                    
+                    <label>Date of Installation*</label>
+                    <input type="date" id="date" name="input-date" required>
+
+                    <label>What features did you find useful? (Optional)</label>
+                    <label>Durability <input type="checkbox" id="feature" name="useful-feature" value="Durability"></label>
+                    <label>Longevity <input type="checkbox" id="feature" name="useful-feature" value="Longevity"></label>
+                    <label>Design <input type="checkbox" id="feature" name="useful-feature" value="Design"></label>
+                    <label>Cost <input type="checkbox" id="feature" name="useful-feature" value="Cost"></label>
+                    <label>Performance <input type="checkbox" id="feature" name="useful-feature" value="Performance"></label>
+                    <label>Versatility <input type="checkbox" id="feature" name="useful-feature" value="Versatility"></label>
+
+                    <label>Written Review (Optional)</label>
+                    <textarea id="written-review" name="written-review" placeholder="Write your review here..."></textarea>
+
+                    <label>Username (Optional)</label>
+                    <input type="text" id="username" name="username" placeholder="User name">
+
+                    <input type="submit" value="Post Review">
+                </fieldset>
+            </form>
+        </main>
+        <footer>
+            <div class="footer-info">
+                <p><span id="currentyear"> &copy; | Ethan Atkinson | Utah | </span></p>
+                <p id="lastModified"></p>
+            </div>
+        </footer>
+    </body>
+</html>
