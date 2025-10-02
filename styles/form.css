@@ -18,6 +18,12 @@ main {
     background-color: var(--secondary-color);
 }
 
+.form-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1rem 1rem;
+}
+
 fieldset {
     display: grid;
     grid-template-columns: 1fr;
@@ -26,11 +32,25 @@ fieldset {
     background-color: var(--primary-color);
 }
 
+.stars {
+    row-gap: 1.5rem;
+}
+
 .radio-item {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: left;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
+
+ input[type='radio'] { 
+    transform: scale(1.5); 
+ }
+
+ input[type='checkbox'] {
+    transform: scale(1.5);
+ }
 
 footer {
     margin-top: 2rem;
@@ -39,7 +59,7 @@ footer {
     text-align: center;
     align-items: center;
     font-size: larger;
-    color: var(#fff);
+    color: black;
 }
 
 .footer-info {
@@ -47,4 +67,28 @@ footer {
   flex-direction: column;
   align-items: center;
   padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 720px){
+
+    input[type='radio'] { 
+     transform: scale(1.5); 
+    }
+
+    input[type='checkbox'] {
+        transform: scale(2);
+    }
+
+    .stars {
+        row-gap: 4rem;
+    }
+
+    .form-section {
+        margin: 1.5rem 1.5rem;
+    }
+
+    .radio-item {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
 }

@@ -41,6 +41,7 @@ const products = [
 const submitButton = document.getElementById("submitButton");
 let submitAmount = 0;
 
+
 function addToHTML(i){
     const addedItem = document.createElement("option");
     addedItem.value = products[i].id;
@@ -58,7 +59,7 @@ function addProductsList(callback){
 }
 
 function countUp() {
-    submitAmount = submitAmount + 1;
+    submitAmount++;
 }
 
 addProductsList(addToHTML);
