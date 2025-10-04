@@ -44,13 +44,20 @@ fieldset {
     margin-bottom: 1rem;
 }
 
- input[type='radio'] { 
+input[type='radio'] { 
     transform: scale(1.5); 
- }
+}
 
- input[type='checkbox'] {
+input[type='checkbox'] {
     transform: scale(1.5);
- }
+}
+
+.form-section label {
+  display: inline-flex; 
+  align-items: center; 
+  gap: 1rem; 
+}
+
 
 footer {
     margin-top: 2rem;
@@ -90,5 +97,9 @@ footer {
     .radio-item {
         margin-top: 2rem;
         margin-bottom: 2rem;
+    }
+
+    .form-section label {
+        gap: 3rem; 
     }
 }
