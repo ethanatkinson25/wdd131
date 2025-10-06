@@ -29,9 +29,55 @@ header {
     font-weight: 400;
     font-style: normal;
     font-size: 1.5rem;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: #fff;
+    margin-bottom: 1rem;
+    padding: 1rem;
 }
 
-.header-span {
+nav {
+    font-family: "Newsreader", serif;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a:link, nav a:visited {
+    color: #fff;
+}
+
+.front-section {
+    text-align: center;
+    background-image: url("/final project/images/barbershop-front.webp");
+    padding: 4rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.front-section p, .front-section h2 {
+    background-color: black;
+    padding: 0.5rem;
+    opacity: 0.7;
+    border-radius: 1rem;
+}
+
+.front-section a:link, .front-section a:visited {
+    color: #fff;
+}
+
+.text-section {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: var(--accent1);
+    color: #fff;
+    border-radius: 1rem;
+}
+
+.text-section a:link, .text-section a:visited {
+    color: #fff;
+}
+
+/* .header-span {
     position: relative;
     display: block;
     background: url("/final project/images/barbershop-front.webp") no-repeat center/cover;
@@ -39,9 +85,9 @@ header {
     margin-bottom: 2rem;
     text-align: center;
     font-size: larger;
-}
+} */
 
-.header-span img {
+/* .header-span img {
     width: 100%;
     height: auto;
     position: relative;
@@ -52,7 +98,7 @@ header {
     font-size: larger;
     padding: 0.5rem;
     color: #fff;
-}
+} */
 
 main, footer {
     font-family: "Newsreader", serif;
@@ -62,6 +108,7 @@ main, footer {
 
 footer {
     margin-top: 2rem;
+    padding-top: 2rem;
     display: block;
     background-color: var(--secondary-color);
     color: #fff;
@@ -80,7 +127,13 @@ footer {
 /*Index 720p view*/
 
 @media screen and (min-width: 720px){
+    .front-section {
+        text-align: left;
+    }
 
+    .front-section p, .front-section h2 {
+        max-width: 30rem;
+    }
 }
 
 /*Index 1080p view*/
