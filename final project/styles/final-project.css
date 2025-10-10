@@ -48,7 +48,7 @@ nav a:link, nav a:visited {
 
 .front-section {
     text-align: center;
-    background-image: url("/final project/images/barbershop-front.webp");
+    background-image: url("/final project/images/barber-chair.webp");
     padding: 4rem;
     color: #fff;
     margin-bottom: 2rem;
@@ -66,6 +66,10 @@ nav a:link, nav a:visited {
 
 .front-section a:link, .front-section a:visited {
     color: #fff;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
 }
 
 .text-section {
@@ -132,11 +136,15 @@ footer {
 @media screen and (min-width: 720px){
     .front-section {
         text-align: left;
+        text-align: center;
+        background-image: url("/final project/images/barbershop-wide.webp");
     }
 
     .front-section-text {
         max-width: 30rem;
     }
+
+    
 }
 
 /*Index 1080p view*/
@@ -144,6 +152,7 @@ footer {
 @media screen and (min-width: 1080px){
     .front-section {
         padding: 6rem;
+        background-image: url("/final project/images/berbershop-ultra-wide.webp");
     }
 }
 
@@ -154,18 +163,6 @@ footer {
         padding: 10rem;
     }
 }
-
-
-/*----------History CSS-----------*/
-
-/*History mobile view*/
-
-/*History 720p view*/
-
-/*History 1080p view*/
-
-/*History 1440p view*/
-
 
 /*-----------Products CSS---------*/
 
@@ -181,6 +178,7 @@ footer {
     background-color: var(--accent1);
     padding: 2rem;
     margin: 1rem;
+    color: #fff;
 }
 
 .product-card p {
@@ -200,3 +198,45 @@ footer {
 
 /*Products 1440p view*/
 
+
+/*-------------Schedule CSS-----------------*/
+
+/*Schedule mobile view*/
+
+h2.schedule-title {
+    margin: 1.5rem;
+}
+
+form {
+    max-width: 50%;
+    margin-left: 1rem;
+    background-color: var(--accent1);
+    color: #FAFAFA;
+    text-shadow: 0 0 3px rgba(0,0,0,0.6);
+
+    font-size: larger;
+}
+
+legend {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    border: 0;
+}
+
+.form-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+
+#appointment-count {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
