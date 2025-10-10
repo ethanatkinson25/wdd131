@@ -43,9 +43,9 @@ const scheduleInfo = {
   printInfo: function(){
     const previousInfo = document.createElement("div");
     previousInfo.innerHTML = `
-    <h3>${this.firstName}, ${this.lastName}</h3>
-    <p>Number: ${this.phoneNumber}</p>
-    <p>${this.appointmentTime}</p>
+    <h3>${this.firstName.value}, ${this.lastName.value}</h3>
+    <p>Number: ${this.phoneNumber.value}</p>
+    <p>${this.appointmentTime.value}</p>
     `;
     document.querySelector(".previous-appointments").appendChild(previousInfo);
   }
@@ -78,6 +78,8 @@ document.querySelector("form").addEventListener("submit", function(e) {
 
   document.getElementById('appointment-count').textContent =
     `You have scheduled ${appointmentCount} appointments with us!`;
+
+  scheduleInfo.printInfo();
 });
 
 const authorName = "Ethan Atkinson | Utah";
